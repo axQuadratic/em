@@ -207,82 +207,56 @@ Ange syftet med arbetet dvs vad som vill åstadkommas med arbetet, frågeställn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Teori}\label{s:teori}
-Beskriv teori, antaganden och annat som ligger till grund för den metod och det arbetssätt som valts. Teorin ska belysa/diskutera/sammanfatta och koppla till problemställningen. Samtliga ekvationer, figurer och tabeller ska numreras i löpande ordning. Figurer och tabeller ska ha en kortfattad text som klart och tydligt anger vad de visar, se Tabell~\ref{t:varme} och Figur~\ref{f:measurementdataonly}. Med figurer avses bilder, diagram, grafer mm. Det ska inte finnas ytterligare rubrik i figuren än den som står i figurtexten. Om ej egentillverkad skall källa anges samt tillstånd av ägare erhållas. Dessutom ska alla figurer och tabeller hänvisas till i den löpande texten. När man använder sig av \LaTeXe\ så anpassas tabellernas och figurernas position för att optimera textflödet då man kompilerar. Detta gäller även när man publicerar vetenskapliga artiklar. På engelska säger man att de är ``floats''.
 
-När det gäller ekvationer så utgör de en del av texten, vilket innebär att kommatecken och punkter används precis som att ekvationen var ett antal sammansatta ord i texten. Variabler och parametrar skrivs med samma font både i ekvationerna och i brödtexten. Vanligtvis så uttrycks variabler och parametrar i $\mathbb{R}$ med hjälp av standardfont för matematik, t ex $x$ och $y$, medan vektorer och matriser oftast uttrycks med upprätt font i fet stil. Vi illustrerar detta med hjälp av nedanstående exempel, som också utgör den teoretiska grunden för tolkning av resultaten som presenteras i avsnitt~\ref{s:resultat}. Det finns många exempel på fysikaliska samband mellan en oberoende variabel $x$ och en beroende variabel $y=f(x)$ som approximativt kan beskrivas med hjälp av en potensfunktion på formen
-%
-\begin{equation} \label{e:potens}
-    y=C x^k,
-\end{equation}
-%
-där $C$ och $k$ kan bestämmas genom anpassning mot mätdata. Notera att i meningen ovan så läser man ekvationen som "...potensfunktion på formen $y$ är lika med $C$ gånger $x$ upphöjt till $k$, där $C$ och $k$ kan bestämmas...". Konstanterna $C$ och $k$ bestäms vanligtvis genom linearisera \eqref{e:potens} genom att logaritmera, dvs
-%
-\begin{equation}\label{e:logy}
-    \ln y = \ln C + k \ln x.
-\end{equation}
-%
-Om vi nu låter $\hat{z}=\ln y$, $w=\ln x$ och $m=\ln C$, så inser vi att \eqref{e:logy} att $\hat{z}(w)$ beskriver följande linjära samband
-%
-\begin{equation}\label{e:lin}
-    \hat{z} = m + k w.
-\end{equation}
-%
-Låt oss anta att vi har tre uppsättningar mätdata $(x_i, y_i)$, där $i=1\ldots3$ att tillgå. Genom att logaritmera mätdatat och att anta att det uppvisar en linjär relation så kan man använda teorin för potensfunktioner ovan tillsammans med minsta kvadratmetoden för att bestämma $k$ och $m$ i \eqref{e:lin}. Låt oss därför introducera matrisen $\mathbf{A}$ och vektorn $\mathbf{z}$ enligt
+Undersökningen görs genom den metod för bestämmande av funktionssamband utifrån mätdata som presenteras i mer detalj i Bucht \textit{et al}.\cite{Compendium} Denna metod innebär skapandet av en variabellista av möjliga variabler som möjligtvis kan påverka resultatet. Därefter görs upprepade mätningar med målet att variera en variabel i taget per serie av mätningar. Förhoppningen är att kunna plotta det individuella sambandet mellan varje variabel och det slutgiltiga mätresultatet, inklusive eventuella variabler som visade sig ha försumbar påverkan på resultatet.
+
+Metoden utgår från antagandet att de allra flesta fysikaliska samband som uppkommer i verkligheten kan skrivas på formen
 %
 \begin{equation}
-    \mathbf{A}=\begin{bmatrix}
-    1&w_1\\
-    1&w_2\\
-    1&w_3
-    \end{bmatrix},
-~~~
-    \mathbf{z}=\begin{bmatrix}
-    z_1\\
-    z_2\\
-    z_3
-    \end{bmatrix}.
+    \label{eq:power}
+    y = C ~ x_1^\alpha ~ x_2^\beta ~ x_3^\gamma \ldots
 \end{equation}
 %
-I vektornotation kan vi alltså uttrycka ${\hat{z}}$, som är en linjärkombination av kolumnerna i $\mathbf{A}$ som
-%
-\begin{equation}\label{e:zhat}
-    \mathbf{\hat{z}}=\mathbf{A}\mathbf{a},
-\end{equation}
-%
-där $\mathbf{a}=[m,k]^\mathrm{T}$. Minsta kvadratmetoden innebär att hitta den $\mathbf{a}$ som minimerar längden\footnote{Ländgen på en vektor i $\mathbb{R}^n$ bestäms av det euklidiska avståndet mellan dess start och ändpunkt.} på vektorn  mellan $\mathbf{\hat{z}}$ och vektorn $\mathbf{z}$. 
+för de ingående variablerna $x_1, x_2, x_3$ etc., som är potensfunktioner upphöjda till konstanter $\alpha, \beta, \gamma$ etc. och konstanten $C$. Det är viktigt att kontrollera att variablernas relation till $y$ faktiskt är potensfunktioner, något som inte är garanterat, men om linjäriseringen (se \ref{s:linear}) av variablerna relativt till $y$ ger ett rimligt resultat, som var fallet under denna laboration, är detta antagande med största sannolikhet sant. Denna linjärisering kan sedan användas för att bestämma exponenterna av varje variabel för vilken mätdata finns tillgänglig. I detta experiment uppkom flera variabler som inte kunde mätas med säkerhet med tillgängliga resurser - för bestämmning av deras exponenter har dimensionsanalys (se \ref{s:dimension}) och den ``speciella tekniken'' (se \ref{s:special}) använts.
 
-Vi inser att den vektor $\mathbf{e}=\mathbf{\hat{z}}-\mathbf{z}$ med det kortaste avståndet $e:=\|e\|=\|\mathbf{\hat{z}}-\mathbf{z}\|$ är den som är vinkelrät mot kolonnrummet\footnote{Planet som kolonnerna i $\mathbf{A}$ spänner upp.} till $\mathbf{A}$. Matematiskt innebär detta att
-%
-\begin{equation}\label{e:ATe}
-    %\mathbf{A}\cdot\mathbf{e}=0 ~~~ \Longleftrightarrow ~~~ 
-    \mathbf{A}^{T}\mathbf{e}=0.
-\end{equation}
-%
-Eftersom att $\mathbf{e}=\mathbf{\hat{z}}-\mathbf{z}$ så har vi alltså
-%
-\begin{equation}\label{e:ATe1}
-    \mathbf{A}^{T}\left(\mathbf{\hat{z}}-\mathbf{z}\right)=0
-    ~~~ \Longleftrightarrow ~~~
-    \mathbf{A}^{T}\mathbf{\hat{z}}=\mathbf{A}^{T}\mathbf{z}
-    ~~~ \Longleftrightarrow ~~~
-    \mathbf{A}^{T}\mathbf{A}\mathbf{a}=\mathbf{A}^{T}\mathbf{z}.
-\end{equation}
-%
-Lösningen $\mathbf{a}$ till detta linjära system ges alltså av
-%
-\begin{equation}\label{e:a}
-    \mathbf{a}=\left(\mathbf{A}^{T}\mathbf{A}\right)^{-1}\mathbf{A}^{T}\mathbf{z}.
-\end{equation}
-%
-Slutligen kan vi bestämma $C=e^m$ genom att invertera $m=\ln C$ och vi alltså anpassat en potensfunktion av typen \eqref{e:potens} till mätdata.
+Efter att alla variablers exponenter har fastställts kan konstanten $C$ bestämmas genom att kombinera den variabla delen av formeln till en variabel $x_t$ så att $y = C \cdot x_t$, vartefter $C$ enkelt kan uttryckas som en kvot av $y$ och $x_t$ för godtyckliga mätvärden. Om den bestämda formeln är riktig bör $C$ få ett konstant värde inom felmarginal för alla genomförda mätningar.
 
-\subsection{Teoriavsnitt ett}
-Teoriavsnittet kan innehålla underrubriker. Kom bara ihåg att det alltid måste vara minst två, se avsnitt~\ref{s:teoriavsnitt2} nedan. 
+\subsection{Linjärisering}\label{s:linear}
 
-När man presenterar variabler som representerar fysikaliska storheter så bör man även skriva ut deras enheter. Vanligtvis betecknar kraft $F$ och uttrycker dess enhet i Newton (N). Notera att ett mellanrum lämnas mellan det numeriska värdet och dess enheter. Undantag görs för procent (\%) och grader (\si{\degree}), som vanligtvis skrivs direkt efter det numeriska värdet, ex. $20$\% och $90$\si{\degree}.  Tyngkraften på grund av massan $m=$~\SI{100}{kg} ges av $F=mg$, där $g\approx$~\SI{9.82}{m/s^2} är tyngdaccelerationen. Tyngdkraften blir alltså $F\approx$~\SI{982}{N}.
+När plotting av slutvärdet i en formel på formen i (\ref{eq:power}) mot en enskild variabel sker (det vill säga variabeln i fråga är den enda som varierar i de nuvarande mätningarna), är det lämpligt att betrakta resten av ekvationen som en konstant, vilket resulterar i en ekvation på formen
+%
+\begin{equation*}
+    y = C \cdot x^k
+\end{equation*}
+%
+där $C$ är en ointressant konstant, och $k$ är den exponent på variabeln som just nu eftersöks.
 
-\subsection{Teoriavsnitt två}\label{s:teoriavsnitt2}
-Om man inte kan dela upp sitt avsnitt under minst två underrubriker, så använder man sig av paragrafer för att dela upp texten. Liksom figurer, tabeller och ekvationer så kan man referera till olika avsnitt i rapporten. I sektion avsnitt~\ref{s:metod} beskrivs härnäst hur man lämpligtvis presenterar den metoden man använt sig av.
+Det exakta värdet på $k$ kan nu bestämmas genom att logaritmera båda leden i ekvationen ovan, vilket ger oss
+%
+\begin{align*}
+    \ln y &= \ln (C \cdot x^k) \\
+    \ln y &= k ~ \ln x + \ln C ,
+\end{align*}
+%
+vilket är en ekvation på formen $y = kx + m$, eller en rät linje. Genom att plotta $\ln y$ mot $\ln x$ i en graf kommer en rät linje bildas, vars lutning kommer vara lika med det undersökta variabelns exponent i ekvationen (\ref{eq:power}). Konstanten $m$ är ointressant och kommer reflekteras i värdet på $C$ i den slutgiltiga formeln.
+
+\subsection{Dimensionsanalys}\label{s:dimension}
+
+För bestämning av okända variabler i en formel på formen (\ref{eq:power}) kan en teknik som utnyttjar att de dimensioner som är närvarande i båda led av formeln måste vara identiska användas. Tekniken beskrivs i detalj i Bucht \textit{et al}.\cite{Compendium}, men för denna rapport krävs ingen förståelse utöver att eftersom det resultat som eftersöks (svängningstiden för en stång hängande i tråd) har dimensionen $T$ måste också dimensionerna på formelns variabel uppgå till $T$. Användning av dimensionsanalys i detta experiment kommer att synas i sektioner \ref{s:metod} och \ref{s:resultat}.
+
+\subsection{En speciell teknik}\label{s:special}
+
+I denna rapport har en teknik beskriven i \cite{Compendium} som ``speciell'' använts. Denna teknik kan användas för att approximera en variabelexponent då mätvärden saknas, till exempel på grund av otillräckligt testmaterial. Det är då möjligt att variera \textit{två} variabler, av vilka en redan har en känd exponent och den andra är variabeln vars exponent eftersöks. Det ger ett samband på formen
+\begin{equation*}
+    y = C_1 \cdot x^k \cdot z^{C_2}
+\end{equation*}
+%
+där $C_1$ och $C_2$ är konstanter och $k$ är den exponent som eftersöks. Eftersom $C_2$ redan är känt går det att ställa upp sambandet
+\begin{equation*}
+    \frac {y}{z^{C_2}} = C_1 \cdot x^k ,
+\end{equation*}
+%
+som sedan kan plottas och linjäriseras enligt metoden som beskrivs i sektion \ref{s:linear}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -                       Metod/Method                     - %

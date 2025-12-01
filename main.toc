@@ -9,8 +9,12 @@
 \contentsline {subsection}{\numberline {3.2}Experimentell uppställning}{3}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Experimentell procedur}{3}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Resultat}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Underrubrik ett vid behov}{4}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Underavsnitt även här om så behövs}{5}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Underavsnitt två till underavsnitt under huvudavsnitt}{5}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Underrubrik två}{5}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Diskussion och slutsatser}{6}{section.5}%
+\contentsline {subsection}{\numberline {4.1}Stångens massa}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Inverkan av trådens längd}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Trådens radie}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Släppvinkel}{5}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Stångens längd}{6}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Stångens radie}{7}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Dimensionsanalys}{7}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Beräkning av konstanten}{8}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Diskussion och slutsatser}{9}{section.5}%

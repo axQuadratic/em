@@ -28,6 +28,8 @@
     % "Images".
 \usepackage{caption} % Figur och tabelltext
 \usepackage{mathtools, amsmath, amssymb} % Verktyg för matematik
+\usepackage{float}
+\usepackage{subcaption}
 \usepackage{siunitx} % Paket för tal, enheter och intervall.
 % Ex. \num{1e6}, \SI{15,3}{Nm} och \SIrange{10}{20}{\celcius})
 \sisetup{output-decimal-marker={,},range-phrase=--,
@@ -270,7 +272,7 @@ I detta avsnitt presenteras den metodik som använts under laborationen.
 
 \subsection{Metodbeskrivning}
 I denna laboration bestämdes ett uttryck för periodtiden för torsionssvänging av en stång genom att mäta tiden för ett helt 
-rotationvarv av flera olika stänger med olika längd, vikt och diameter. Tiden för ett rotationsvarv för respektive stav analyserades, därefter plottades grafer i Microsof Excel utifrån mätvärden som gör att vi kan exkludera faktorer som inte påverkar rotationstiden. 
+rotationvarv av flera olika stänger med olika längd, vikt och diameter. Tiden för ett rotationsvarv för respektive stav analyserades, därefter plottades grafer i Microsoft Excel utifrån mätvärden som gör att vi kan exkludera faktorer som inte påverkar rotationstiden. 
 
 
 \subsection{Experimentell uppställning}
@@ -284,8 +286,8 @@ Experimentet uppställdes som nedan, med en stång upphängd fritt i jämvikt fr
 \end{figure}
 
 \subsection{Experimentell procedur}
-För varje stång med känd diameter, längd och vikt bestämdes tiden för en torsionssvängning. Detta gjordes genom att först låta stången ligga i 
-vila och därefter vrida stången en bestämd vinkel, därefter med stoppur ta tiden för stången att återvända till sin ursprungsposition. Rotationstiden för varje stång
+För varje stång med känd diameter, längd och vikt bestämdes tiden för en svängning. Detta gjordes genom att först låta stången ligga i 
+vila och därefter, för hand, vrida stången en bestämd vinkel, därefter med stoppur ta tiden för stången att återvända till sin ursprungsposition. Rotationstiden för varje stång
 fördes in i en tabell. Mätingarna för varje stav utfördes tre gånger vartefter medelvärdet användes för säkrare resultat. Rotationstiderna 
 fördes därefter in i en tabell.
 
@@ -295,98 +297,362 @@ fördes därefter in i en tabell.
 \newpage
 \section{Resultat}\label{s:resultat}
 
-% Innehåll: resultat och analys.
-% I vissa fall kan man ha ”Resultat och diskussion” som
-% kapitel.
+\subsection{Stångens massa}
+\label{sub:gamma}
+Stångens massa $m_s$ varierades samtidigt som övriga variabler behölls konstanta:
 
-Detta är förmodligen den största delen av rapporten. Här redovisas resultaten rakt på sak på ett objektivt/neutralt sätt. Ofta är det lämpligt att dela upp texten i ett antal underrubriker. Materialet måste presenteras i logisk ordning, vilket inte behöver vara den ordning i vilken försöket/arbetet har utförts.
-
-Läsaren skall kunna läsa rapporten utan att behöva bläddra fram och tillbaka. Det ska vara tydligt vad som är data respektive analys av data. Visas resultat i tabell- eller figurform så måste man i den löpande texten kortfattat beskriva vad man ser i figurerna/tabellerna. De placeras med fördel i närheten (efter) där de först refererades till, men med tanke på hur de hanteras vid typsättning så kan man inte garantera att de hamnar just där man helst vill att de ska vara. En konsekvens av detta är att man inte bör referera till dem som ``se Figur~\ref{f:analys} nedan'' eller ``Tabell~\ref{t:varme} ovan''. Man refererar rätt och slätt till dem med deras nummer och läsaren får lov att leta reda på var de befinner sig. Läsaren uppmanas nu att leta reda på Figur~\ref{f:analys} och Tabell~\ref{t:varme}. 
-
-I Tabell~\ref{t:varme} innehåller uppmätta värden för kvarvarande värmemängd $\theta$ (J) vid fyra olika tidpunkter $t$ (s).
-%
-% Det skall alltid finnas en tabelltext som förklarar vad som
-% finns i tabellen. Tabellnummer och text ska stå ovanför
-% tabellen.
-\begin{table}[ht]
-\caption{Mätvärden för kvarvarande värmemängd $\theta$ vid ett antal olika tidpunkter $t$.}\label{t:varme}
+\begin{table}[H]
 \centering
-    \begin{tabular}{c|cccccc}
-        %\hline
-        $t$ (s)       &6     & 35 & 47  & 87  & 145 & 329\\
+    \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
-        $\theta$ (kJ) &3.10 &0.82 &0.60 &0.51 &0.28 &0.17
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $0.40$ & $0.0075$ & Varieras & $0.70$ & $0.0006$ & $90$ \\ \hline
      \end{tabular} 
 \end{table}
-%
-Figur~\ref{f:measurementdataonly} åskådliggör de uppmätta värdena för kvarvarande värmemängd vid tidpunkterna tabellerade i Tabell~\ref{t:varme} på två olika sätt. Till vänster i figuren återges nämligen rådatat och till höger så återges logaritmerat data.
-%
-\begin{figure}[!ht] % h=here t=top vilket är var vi helst skulle vilja 
-% att den placerades. Kommandot \FloatBarrier kan också
-% användas i koden för att begränsa hur långt bak en figur
-% eller tabell hamnar i dokumentet.
-%
-\begin{center}
-  \includegraphics[width=0.5\textwidth,
-  %trim={<left> <lower> <right> <upper>} 
-   trim={0.7cm 7.5cm 1.2cm 6cm},clip]{measurementdataonly.pdf}~
-   \includegraphics[width=0.5\textwidth,
-  %trim={<left> <lower> <right> <upper>} 
-   trim={0.7cm 7.5cm 1.2cm 6cm},clip]{logdata.pdf}
-  \caption{Till vänster: uppmätta värden för kvarvarande värmemängd i vid ett antal tidpunkter. Till höger: logaritmerat data. \label{f:measurementdataonly}}
-\end{center}
+
+\begin{table}[H]
+\caption{Mätvärden för periodtiden $t$ vid olika stång-massor $m_s$}\label{t:stångMassa_Tid}
+\centering
+    \begin{tabular}{c|cccccc}
+        $m_s$ (kg) & 0.571 & 0.606 & 0.218 & 0.113\\
+        \hline
+        $t$ (s)   & 14.31 & 14.95 & 8.67 & 6.29
+     \end{tabular} 
+\end{table}
+
+I figur~\ref{fig:stångMassa_Tid} sågs ett samband mellan stångens massa och tiden. Vi skriver upp ekvationen som följande:
+
+\begin{align}
+    \label{eq:stångMassa_Tid}
+    t=C \cdot m_s^\gamma
+\end{align}
+
+Linjäriseringen av ekvation~\ref{eq:stångMassa_Tid} gav exponenten $\gamma = 0.5143$ (se figur~\ref{fig:stångMassa_Tid_Linjär}) vilket avrundades till $\gamma = \frac{1}{2}$.
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Images/Stångens_Massa_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av stångens massa, $m_s$ (kg), enligt värden från tabell~\ref{t:stångMassa_Tid}}
+  \label{fig:stångMassa_Tid}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Images/Stångens_Massa_Linjäriserad_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Logaritmerad periodtid, ln($t$), som funktion av stångens massa logaritmerad, ln($m_s$).}
+  \label{fig:stångMassa_Tid_Linjär}
+\end{minipage}
+
 \end{figure}
-%
-Med hjälp av teorin i avsnitt~\ref{s:teori} och mätvärdena i Tabell~\ref{t:varme} anpassas en potensfunktion av typen
-%
-\begin{equation}
-\theta = C t^k.
-\end{equation}
-%
-Genom att använda minsta kvadratmetoden och då speciellt \eqref{e:a} kan vi bestämma $[m,k]^T$ till $[9.30,-0.72]^T$ med två decimalers noggrannhet. Det innebär således att 
-%
-\begin{equation}\label{s:linvarme}
-    \hat{\theta}\approx 1100t^{-0.72}.
-\end{equation}
-%
-Figur~\ref{f:analys} återger värdena för kvarvarande värmemängd i Tabell~\ref{t:varme} tillsammans med den anpassade potensfunktionen $1100t^{-0.72}$.
-%
-\begin{figure}[t] % h=here t=top vilket är var vi helst skulle
-% vilja att den placerades
-\begin{center}
-  \includegraphics[width=0.6\textwidth,
-  %trim={<left> <lower> <right> <upper>} 
-   trim={0.7 7.5cm 1.2 6cm},clip]{analysis.pdf}
-  \caption{Uppmätta värden för kvarvarande värmemängd i vid ett antal tidpunkter tillsammans med den anpassade potensfunktionen $1100t^{-0.72}$. \label{f:analys}}
-\end{center}
+
+\subsection{Inverkan av trådens längd}
+\label{sub:delta}
+Trådens längd $l_t$ varierades samtidigt som övriga variabler behölls konstanta:
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $0.40$ & $0.0075$ & $0.218$ & Varieras & $0.0006$ & $90$ \\ \hline
+     \end{tabular} 
+\end{table}
+
+\begin{table}[H]
+\caption{Mätvärden för periodtiden $t$ vid olika tråd-längder $l_t$}\label{t:trådLängd_Tid}
+\centering
+    \begin{tabular}{c|cccccc}
+        $l_t$ (m) & 0.70 & 0.50 & 0.24 & 0.13\\
+        \hline
+        $t$ (s)   & 8.67 & 7.14 & 5.29 & 3.92
+     \end{tabular} 
+\end{table}
+
+I figur~\ref{fig:trådLängd_Tid} sågs ett samband mellan trådens längd och tiden. Vi skriver upp ekvationen som följande:
+
+\begin{align}
+    \label{eq:trådLängd_Tid}
+    t=C \cdot l_t^\delta
+\end{align}
+
+Linjäriseringen av ekvation~\ref{eq:trådLängd_Tid} gav exponenten $\delta = 0.4551$ (se figur~\ref{fig:trådLängd_Tid_Linjär}) vilket avrundades till $\delta = \frac{1}{2}$.
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Images/Trådens_Längd_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av trådens längd, $l_t$ (m), enligt värden från tabell~\ref{t:trådLängd_Tid}}
+  \label{fig:trådLängd_Tid}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Images/Trådens_Längd_Linjäriserad_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Logaritmerad periodtid, ln($t$), som funktion av trådens längd logaritmerad, ln($l_t$).}
+  \label{fig:trådLängd_Tid_Linjär}
+\end{minipage}
+
 \end{figure}
-%
-En vidare analys ger det relativa felet
-%
-\begin{equation}
-    \frac{\|\hat{\mathbf{z}}-\mathbf{z}\|}{\|\mathbf{z}\|}\approx0.014
-\end{equation}
-%
-% Diagram ska ha storhet och enhet på axlarna (SI). Är det tex
-% logaritmerade diagram ska de ha storhet (men inte enhet) på
-% axlarna.
-% Figurnummer och text ska stå under figur och hänga ihop på
-% samma sida.
 
-För dem som är intresserade finns ett paket i \LaTeXe\ för att skapa grafer direkt i källfilen. Kolla på
-\href{https://www.overleaf.com/latex/examples/latex-figures-using-tikzpicture-pgfplots-and-overpic/dffvyqktbcwk}{https://www.overleaf.com/latex/examples/latex-figures-using-tikzpicture-pgfplots-and-overpic}.
+\subsection{Trådens radie}
+\label{sub:epsilon}
+Trådens radie $r_t$ varierades samtidigt som övriga variabler behölls konstanta:
 
-\subsection{Underrubrik ett vid behov}\label{s:resultatavsnitt1}
-Har man en så måste man ha två.
+\begin{table}[H]
+\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $0.40$ & $0.0075$ & $0.698$ & $0.70$ & Varieras & $90$ \\ \hline
+     \end{tabular} 
+\end{table}
 
-\subsubsection{Underavsnitt även här om så behövs}
-Men, har man en så måste man...
+\begin{table}[H]
+\caption{Mätvärden för periodtiden $t$ vid olika tråd-radier $r_t$}\label{t:trådRadie_Tid}
+\centering
+    \begin{tabular}{c|cccccc}
+        $r_t$ ($10^{-3}$ m) & 0.4 & 0.5 & 0.6 & 1.0\\
+        \hline
+        $t$ (s)   & 44.83 & 30.42 & 20.69 & 7.43
+     \end{tabular} 
+\end{table}
 
-\subsubsection{Underavsnitt två till underavsnitt under huvudavsnitt}
-...ha minst en till.
+I figur~\ref{fig:trådRadie_Tid} sågs ett samband mellan trådens radie och tiden. Vi skriver upp ekvationen som följande:
 
-\subsection{Underrubrik två}
-Denna ligger på samma nivå som underrubrik~\ref{s:resultatavsnitt1} och innebär att det finns minst två underrubriker till resultatavsnittet i denna rapport.
+\begin{align}
+    \label{eq:trådRadie_Tid}
+    t=C \cdot r_t^\epsilon
+\end{align}
+
+Linjäriseringen av ekvation~\ref{eq:trådRadie_Tid} gav exponenten $\epsilon = -1.9784$ (se figur~\ref{fig:trådRadie_Tid}) vilket avrundades till $\epsilon = -2$.
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Images/Trådens_Radie_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av trådens radie, $r_t$ (m), enligt värden från tabell~\ref{t:trådRadie_Tid}}
+  \label{fig:trådRadie_Tid}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Images/Trådens_Radie_Linjäriserad_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Logaritmerad periodtid, ln($t$), som funktion av trådens radie logaritmerad, ln($r_t$).}
+  \label{fig:trådRadie_Tid_Linjär}
+\end{minipage}
+
+\end{figure}
+
+\subsection{Släppvinkel}
+\label{sub:theta}
+Släppvinkeln $\alpha$ varierades samtidigt som övriga variabler behölls konstanta:
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $0.40$ & $0.0075$ & $0.218$ & $0.70$ & $0.0005$ & Varieras \\ \hline
+     \end{tabular} 
+\end{table}
+
+\begin{table}[H]
+\caption{Mätvärden för periodtiden $t$ vid olika släppvinklar $\alpha$}\label{t:släppvinkel_Tid}
+\centering
+    \begin{tabular}{c|cccccc}
+        $\alpha$ ($^\circ$) & 45 & 90 & 180 & 360\\
+        \hline
+        $t$ (s)   & 13.08 & 13.49 & 13.61 & 12.87
+     \end{tabular} 
+\end{table}
+
+I figur~\ref{fig:släppvinkel_Tid} sågs inget tydligt samband mellan släppvinkeln och tiden. Vi skriver upp ekvationen som följande:
+
+\begin{align}
+    \label{eq:släppvinkel_Tid}
+    t=C \cdot \alpha^\theta
+\end{align}
+
+Linjäriseringen av ekvation~\ref{eq:släppvinkel_Tid} gav exponenten $\theta = -0.0057$ (se figur~\ref{fig:släppvinkel_Tid}) vilket avrundades till $\theta = 0$.
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Images/Släppvinkel_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av släppvinkeln, $\alpha$ ($^\circ$), enligt värden från tabell~\ref{t:släppvinkel_Tid}}
+  \label{fig:släppvinkel_Tid}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Images/Släppvinkel_Linjäriserad_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Logaritmerad periodtid, ln($t$), som funktion av släppvinkeln logaritmerad, ln($\alpha$).}
+  \label{fig:släppvinkel_Tid_Linjär}
+\end{minipage}
+
+\end{figure}
+
+\subsection{Stångens längd}
+\label{sub:alpha}
+Stångens längd $l_s$ och stångens massa $m_s$ varierades samtidigt som övriga variabler behölls konstanta:
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) \\ \hline
+        Varieras & $0.0075$ & Varieras & $0.70$ & $0.0005$ \\ \hline
+     \end{tabular} 
+\end{table}
+
+\begin{table}[H]
+\caption{Mätvärden för periodtiden $t$ vid olika stång-längder och stång-massor}\label{t:stångLängd_Tid}
+\centering
+    \begin{tabular}{c|cccccc}
+        $l_s$ (m) & 0.20 & 0.20 & 0.50 & 0.50 & 0.40 & 0.30\\
+        $m_s$ (kg) & 0.282 & 0.282 & 0.710 & 0.710 & 0.571 & 0.420\\
+        \hline
+        $t$ (s)   & 10.93 & 11.16 & 44.69 & 43.49 & 32.27 & 21.49
+     \end{tabular} 
+\end{table}
+
+I figur~\ref{fig:stångLängd_Tid} sågs ett samband mellan stångens längd och tiden. Vi skriver upp ekvationen som följande:
+
+\begin{align}
+    \label{eq:stångLängd_Tid}
+    \frac{t}{m_s^2}=C \cdot l_s^\alpha
+\end{align}
+
+Linjäriseringen av ekvation~\ref{eq:stångLängd_Tid} gav exponenten $\alpha = 0.9933$ (se figur~\ref{fig:stångLängd_Tid_Linjär}) vilket avrundades till $\alpha = 1$.
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Images/Stångens_Längd_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Periodtid/stångmassa$^2$, $\frac{t}{m_s^2}$ (s), som funktion av stångens längd, $l_s$ (m), enligt värden från tabell~\ref{t:stångLängd_Tid}}
+  \label{fig:stångLängd_Tid}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Images/Stångens_Längd_Linjäriserad_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Logaritmerad periodtid/stångmassa$^2$, ln($\frac{t}{m_s^2}$), som funktion av stångens längd logaritmerad, ln($l_s$).}
+  \label{fig:stångLängd_Tid_Linjär}
+\end{minipage}
+
+\end{figure}
+
+\subsection{Stångens radie}
+\label{sub:beta}
+Stångens radie $r_s$ och stångens massa $m_s$ varierades samtidigt som övriga variabler behölls konstanta:
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) \\ \hline
+        $0.40$ & Varieras & Varieras & $0.70$ & $0.0005$ \\ \hline
+     \end{tabular} 
+\end{table}
+
+\begin{table}[H]
+\caption{Mätvärden för periodtiden $t$ vid olika stång-radier och stång-massor}\label{t:stångRadie_Tid}
+\centering
+    \begin{tabular}{c|cccccc}
+        $r_s$ ($10^{-3}$ m) & 7.5 & 7.5 & 10 & 10 & 12.5 & 5.0\\
+        $m_s$ (kg) & 0.134 & 0.571 & 0.995 & 0.995 & 1.542 & 1.542\\
+        \hline
+        $t$ (s)   & 14.43 & 32.27 & 42.59 & 42.89 & 50.67 & 20.92
+     \end{tabular} 
+\end{table}
+
+I figur~\ref{fig:stångRadie_Tid} sågs inget tydligt samband mellan stångens radie och tiden. Vi skriver upp ekvationen som följande:
+
+\begin{align}
+    \label{eq:stångRadie_Tid}
+    \frac{t}{m_s^2}=C \cdot r_s^\beta
+\end{align}
+
+Linjäriseringen av ekvation~\ref{eq:stångRadie_Tid} gav exponenten $\beta = -0.0048$ (se figur~\ref{fig:stångRadie_Tid_Linjär}) vilket avrundades till $\beta = 0$.
+
+\begin{figure}[H]
+\centering
+
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=0.8\linewidth]{Images/Stångens_Radie_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Periodtid/stångmassa$^2$, $\frac{t}{m_s^2}$ (s), som funktion av stångens radie, $r_s$ (m), enligt värden från tabell~\ref{t:stångRadie_Tid}}
+  \label{fig:stångRadie_Tid}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Images/Stångens_Radie_Linjäriserad_Graf.png}
+  \captionsetup{width=.8\linewidth}
+  \captionof{figure}{Logaritmerad periodtid/stångmassa$^2$, ln($\frac{t}{m_s^2}$), som funktion av stångens radie logaritmerad, ln($r_s$).}
+  \label{fig:stångRadie_Tid_Linjär}
+\end{minipage}
+
+\end{figure}
+
+\subsection{Dimensionsanalys}
+Enligt våra resultat gör vi ansats för periodtiden:
+\begin{align}
+    \label{eq:dimensionsanalysResultat}
+    t= C \cdot l_s^\alpha \cdot r_s^\beta \cdot m_s^\gamma \cdot l_t^\delta \cdot r_t^\epsilon \cdot \alpha^\theta \cdot G^\zeta \cdot g^\eta
+\end{align}
+Där $C$ är en dimensionslös konstant och experiment har givit:
+\begin{align*}
+    \alpha &= 1 \text{ (se avsnitt~\ref{sub:alpha}})\\
+    \beta &= 0 \text{ (se avsnitt~\ref{sub:beta}})\\
+    \gamma &= \frac{1}{2} \text{ (se avsnitt~\ref{sub:gamma}})\\
+    \delta &= \frac{1}{2} \text{ (se avsnitt~\ref{sub:delta}})\\
+    \epsilon &= -2 \text{ (se avsnitt~\ref{sub:epsilon}})\\
+    \theta &= 0 \text{ (se avsnitt~\ref{sub:theta}})
+\end{align*}
+Övriga exponenter ($\zeta$ och $\eta$) bestämms med dimensionsanalys av ekvation~\ref{eq:dimensionsanalysResultat}:
+\begin{align*}
+    &[t]= [C] \cdot [l_s] \cdot [m_s]^{1/2} \cdot [l_t]^{1/2} \cdot [r_t]^{-2} \cdot [G]^\zeta \cdot [g]^\eta
+    &\xRightarrow{} \\
+    &T = L \cdot M^{1/2} \cdot L^{1/2} \cdot L^{-2} \cdot (ML^{-1}T^{-2})^\zeta \cdot (LT^{-2})^\eta &\xRightarrow{}\\
+    &T = L^{1+1/2-2-\zeta+\eta} \cdot M^{1/2+\zeta} \cdot T^{-2\zeta-2\eta}    
+\end{align*}
+Dimensionerna måste vara lika i högerled och vänsterled:
+\begin{align*}
+    M : 0 = &\frac{1}{2}+\zeta &\xRightarrow{}&&\zeta=-\frac{1}{2}\\
+    T : 1 = &-2\zeta-2\eta &\xRightarrow{}&&\eta = -\frac{1}{2}-\zeta = 0\\
+    L : 0 = &1+\frac{1}{2}-2-\zeta+\eta &\xRightarrow{}&&\eta-\zeta =\frac{1}{2}
+\end{align*}
+Detta ger oss periodtiden:
+\begin{align}
+    \label{eq:formelUtanKonstant}
+    t = C \cdot \frac{l_s\sqrt{m_sl_t}}{r_t^2\sqrt{G}}
+\end{align}
+
+\subsection{Beräkning av konstanten}
+Slutkonstanten beräknades genom att skapa en graf där $Y=t$ och $X=\frac{l_s\sqrt{m_sl_t}}{r_t^2\sqrt{G}}$, där all mätdata stoppas in samt skjuvmodulen för stål ($80\cdot10^9$ Pa). Lutningen blir värdet på $C=1.584 \approx 1.6$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Images/Konstant_Graf.png}
+    \caption{Periodtid, $t$ (s), som funktion av $\frac{l_s\sqrt{m_sl_t}}{r_t^2\sqrt{G}}$ (s)}
+    \label{fig:placeholder}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -             Diskussion och slutsater/Summary           - %
@@ -394,15 +660,17 @@ Denna ligger på samma nivå som underrubrik~\ref{s:resultatavsnitt1} och inneb�
 \newpage
 \section{Diskussion och slutsatser}
 
-% Kan delas i separata kapitel: ”Diskussion” respektive
-% ”Slutsatser”.
-% Slutsatser skall vara korta och koncisa.
-% Ibland är det lämpligast med indelningen ”Diskussion” samt
-% ”Slutsatser och fortsatt arbete”
+Som har klargjorts i sektion \ref{s:resultat} är formeln för periodtid av torsionssvängning av en stång upphängd i en tråd, $t$, lika med
 
-Här diskuteras (vad betyder/medför) resultaten utifrån ett vidare perspektiv och ställs i relation exempelvis till tidigare arbeten, referera i sådant fall till dessa. Utgående härifrån dras nödvändiga slutsatser som ska svara på de mål som angivits och vad resultaten har för relevans. Koppla slutsatser till uppställda mål. Diskutera felkällor och osäkerheter. Till exempel så skulle man här kunna nämna att ``det relativa felet på ca $1.4$\% antyder att potensfunktion $1100t^{-0.72}$ representerar den kvarvarande värmen med relativt god noggrannhet''.
+\begin{align*}
+    \frac{\pi~l_s\sqrt{m_sl_t}} {2~r_t^2\sqrt{G}} .
+\end{align*}
 
-Det är även lämpligt att i denna del avsluta med förslag och rekommendationer på fortsatta studier och undersökningar i ämnet. ``För att bättre kunna säkerställa approximationens noggrannhet behövs fler punkter mätdata''. Man kan dela upp diskussion, slutsatser och framtida studier i fristående kapitel.
+Målet med detta experiment var att undersöka hur olika fysiska egenskaper påverkar svängningsperioden av en stång upphängd i en tråd, samt att kontrollera om de empiriska resultaten stämmer överens med teorin. Under experimentets gång fanns att släppvinkeln inte påverkar periodtiden så länge den är liten, vilket är vad den framtagna formeln förutsäger. Periodtiden ökade när en längre tråd eller stång användes, och ökade lite när mer massa lades på stången. En tjockare tråd gjorde periodtiden kortare, eftersom den då blev styvare och utövade mer kraft på stången.
+
+De lineariserade graferna visade tydliga räta linjer, vilket betyder att relationerna mellan de testade variablerna och periodtiden kan beskrivas med potenser som förväntat i ansatsen. De uppmätta resultaten stämmer bra överens med de teoretiskt förväntade värdena väl - några små variationer kommer naturligtvis att introduceras av den manuella tidtagningsmetoden med stoppur. Trots detta är det tydligt att experimentet bekräftade det förväntade beteendet vid en sådan här torsionssvängning.
+
+Genom att förändra en variabel i taget och plotta resultaten från varje grupp av mätdata kunde vi tydligt se hur varje fysikalisk egenskap påverkade svängningstiden. Experimentet gav därmed en god förståelse av torsionssvängning och visade att den valda metoden och teorin är användbar för att studera dessa sammanhang under enkla laboratioreförhållanden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -                  Referenser/Bibliography               - %

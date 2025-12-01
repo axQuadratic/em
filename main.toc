@@ -8,8 +8,6 @@
 \contentsline {subsection}{\numberline {3.1}Metodbeskrivning}{3}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Experimentell uppställning}{3}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Experimentell procedur}{3}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Mätmetod ett}{3}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Mätmetod två}{3}{subsubsection.3.3.2}%
 \contentsline {section}{\numberline {4}Resultat}{4}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Underrubrik ett vid behov}{4}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Underavsnitt även här om så behövs}{5}{subsubsection.4.1.1}%

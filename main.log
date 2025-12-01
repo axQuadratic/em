@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.7)  20 NOV 2025 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.10.7)  1 DEC 2025 13:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,6 +814,19 @@ Package pdftex.def Info: Images/ltu_swe.jpg  used on input line 125.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-t1.enc} <./Images/hund_liten.jpg> <./Images/ltu_sw
 e.jpg>]
+./main.tex:139: Undefined control sequence.
+l.139 ...it{Experimentell Metodik} av Bucht \texit
+                                                  {et al}.\cite{Compendium},...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation 'Compendium' on page 1 undefined on input line 139.
+
+
 
 [1] (./main.toc)
 \tf@toc=\write5
@@ -825,47 +838,43 @@ e.jpg>]
 
 [3]
 
-LaTeX Warning: Citation 'Sterte2001' on page 1 undefined on input line 174.
-
-
-
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.208 \newpage
+l.210 \newpage
                [1]
 
 [2]
 
 [3]
 
-LaTeX Warning: Citation 'MATLAB2019' on page 4 undefined on input line 298.
+LaTeX Warning: Citation 'MATLAB2019' on page 4 undefined on input line 300.
 
 
 
 [4]
-<Images/measurementdataonly.pdf, id=179, 597.23125pt x 845.1575pt>
+<Images/measurementdataonly.pdf, id=180, 597.23125pt x 845.1575pt>
 File: Images/measurementdataonly.pdf Graphic file (type pdf)
 <use Images/measurementdataonly.pdf>
-Package pdftex.def Info: Images/measurementdataonly.pdf  used on input line 353
+Package pdftex.def Info: Images/measurementdataonly.pdf  used on input line 355
 .
 (pdftex.def)             Requested size: 241.84843pt x 205.2806pt.
-<Images/logdata.pdf, id=181, 597.23125pt x 845.1575pt>
+<Images/logdata.pdf, id=182, 597.23125pt x 845.1575pt>
 File: Images/logdata.pdf Graphic file (type pdf)
 <use Images/logdata.pdf>
-Package pdftex.def Info: Images/logdata.pdf  used on input line 356.
+Package pdftex.def Info: Images/logdata.pdf  used on input line 358.
 (pdftex.def)             Requested size: 241.84843pt x 205.2806pt.
 
-Overfull \hbox (4.44336pt too wide) in paragraph at lines 351--357
+Overfull \hbox (4.44336pt too wide) in paragraph at lines 353--359
  []  [] 
  []
 
-<Images/analysis.pdf, id=188, 597.23125pt x 845.1575pt>
+<Images/analysis.pdf, id=189, 597.23125pt x 845.1575pt>
 File: Images/analysis.pdf Graphic file (type pdf)
 <use Images/analysis.pdf>
-Package pdftex.def Info: Images/analysis.pdf  used on input line 380.
+Package pdftex.def Info: Images/analysis.pdf  used on input line 382.
 (pdftex.def)             Requested size: 290.22107pt x 224.76044pt.
 
 
@@ -875,7 +884,7 @@ Package pdftex.def Info: Images/analysis.pdf  used on input line 380.
 
 [7]
 
-LaTeX Warning: Empty bibliography on input line 432.
+LaTeX Warning: Empty bibliography on input line 434.
 
 (./main.aux)
  ***********
@@ -898,13 +907,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24728 strings out of 475171
- 474359 string characters out of 5767095
+ 24730 strings out of 475171
+ 474381 string characters out of 5767095
  1042746 words of memory out of 5000000
- 47440 multiletter control sequences out of 15000+600000
- 576276 words of font info for 84 fonts, out of 8000000 for 9000
+ 47441 multiletter control sequences out of 15000+600000
+ 576962 words of font info for 85 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,10n,81p,1911b,1318s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,81p,1911b,1347s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -922,11 +931,11 @@ ts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public
 hare/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist
 /fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/cm-super/sfrm1728.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
-ftt1200.pfb>
-Output written on main.pdf (11 pages, 654769 bytes).
+fti1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (11 pages, 672997 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 290 compressed objects within 3 object streams
+ 361 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
  47 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

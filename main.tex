@@ -113,8 +113,12 @@
     \\
     \\
     {Författare} \\
-    {\tt forfattare@student.ltu.se} \\
-    {Institutionen för teknikvetenskap och matematik} \\
+    {\tt jonbir-5@student.ltu.se} \\
+    {\tt abcdef-0@student.ltu.se} \\
+    {\tt abcdef-0@student.ltu.se} \\
+    {\tt abcdef-0@student.ltu.se} \\
+    {Laborationshandledare} \\
+    {\tt Kim-Jonas Ylivainio} \\
     \\ 
     \includegraphics[width=0.2\textwidth]{ltu_swe.jpg}
     }
@@ -162,8 +166,15 @@ Denna rapport är en studie av svängningsrörelse som uppstår i en stång upph
 % teckenförklaring.
 \begin{table}[h] 
     \begin{tabular}{l l} % Två vänsterjusterade
-    $\rho$ & Densitet (\si{kg/m^3}) \\
-    $A$ & Area (\si{m^2})
+    $l_s$ & Längd av stång (\si{m}) \\
+    $r_s$ & Radius av stång (\si{m}) \\
+    $m_s$ & Massa av stång (\si{kg}) \\
+    $l_t$ & Längd av tråd (\si{m}) \\
+    $r_t$ & Radius av tråd (\si{m}) \\
+    $\alpha$ & Släppvinkel (\si{^\circ}) \\
+    $G$ & Skjuvmodulen (\si{N/m^2}) \\
+    $g$ & Tyngdacceleration (\si{m/s^2}) \\
+    $C$ & Dimensionslös konstant 
     \end{tabular}
 \end{table}
 
@@ -660,11 +671,13 @@ Slutkonstanten beräknades genom att skapa en graf där $Y=t$ och $X=\frac{l_s\s
 \newpage
 \section{Diskussion och slutsatser}
 
-Som har klargjorts i sektion \ref{s:resultat} är formeln för periodtid av torsionssvängning av en stång upphängd i en tråd, $t$, lika med
+Som har klargjorts i sektion \ref{s:resultat} är formeln för periodtid $t$ för torsionssvängning av en stång upphängd i en tråd lika med:
 
 \begin{align*}
-    \frac{\pi~l_s\sqrt{m_sl_t}} {2~r_t^2\sqrt{G}} .
+    t =\frac{\pi~l_s\sqrt{m_sl_t}} {2~r_t^2\sqrt{G}} .
 \end{align*}
+
+Konstanten har avrundats till $\frac{\pi}{2}$ istället för $1.6$ eftersom det finns en sannolikhet att $\pi$ är en del av ekvationen då cyllindrar är involverade och eftersom $\frac{pi}{2}$ är närmare det uppmätta värdet för $C$ än vad $1.6$ är.
 
 Målet med detta experiment var att undersöka hur olika fysiska egenskaper påverkar svängningsperioden av en stång upphängd i en tråd, samt att kontrollera om de empiriska resultaten stämmer överens med teorin. Under experimentets gång fanns att släppvinkeln inte påverkar periodtiden så länge den är liten, vilket är vad den framtagna formeln förutsäger. Periodtiden ökade när en längre tråd eller stång användes, och ökade lite när mer massa lades på stången. En tjockare tråd gjorde periodtiden kortare, eftersom den då blev styvare och utövade mer kraft på stången.
 

@@ -105,18 +105,18 @@
 
 % Byt LTU logga vid engelsk rapport.
 
-\title{Lathund för rapportskrivning:\\ % \\ <-Gör en radretur
-\LaTeX\--mall} 
+\title{Experimentell metodik:\\ % \\ <-Gör en radretur
+Analys av periodtid för svängning av torsionspendel} 
 
 \author{
-    \includegraphics[width=0.6\textwidth]{hund_liten.jpg} \\
+    \includegraphics[width=0.5\textwidth]{EM Instruktioner.png} \\
     \\
     \\
     {Författare} \\
-    {\tt jonbir-5@student.ltu.se} \\
-    {\tt abcdef-0@student.ltu.se} \\
-    {\tt abcdef-0@student.ltu.se} \\
-    {\tt abcdef-0@student.ltu.se} \\
+    {\tt Jonny Birgell (jonbir-5@student.ltu.se)} \\
+    {\tt Nils Konradsson (nilkon-5@student.ltu.se)} \\
+    {\tt André Angeria (andang-1@student.ltu.se)} \\
+    {\tt Abdalla Nasreldin (abdnas-5@student.ltu.se)} \\
     {Laborationshandledare} \\
     {\tt Kim-Jonas Ylivainio} \\
     \\ 
@@ -142,7 +142,7 @@
 % Sammanfattning heter Abstract på engelska
 \section*{Sammanfattning} % "*" tar bort numrering av titeln
 
-Denna rapport är en studie av svängningsrörelse som uppstår i en stång upphängd i en tunn pianotråd då den utsätts för små vridande rörelser. Målet är att ta fram en generell formel för periodtiden för en sådan rörelse, samt att bestämma exakt vilka variabler som påverkar resultatet. Detta gjordes genom att göra mätningar av periodtiden med olika värden på de variabler som antagits vara delaktiga i den slutgiltiga formeln, vartefter metoder som uttrycks i kompendiet \textit{Experimentell Metodik} av Bucht \textit{et al}.\cite{Compendium}, inklusive linjärisering och dimensionsanalys, nyttjades för att ta fram de mätvärden som saknades. Det slutgiltiga resultatet var att svängningstiden bland annat beror av materialet på tråden, stångens längd och massa, men intressant nog inte av flera variabler som antogs ha en inverkan, viktigast släppvinkeln och gravitationskonstanten $g$.
+Denna rapport är en studie av svängningsrörelse som uppstår i en stång upphängd i en tunn pianotråd då den utsätts för små vridande rörelser. Målet är att ta fram en generell formel för periodtiden för en sådan rörelse, samt att bestämma exakt vilka variabler som påverkar resultatet. Detta gjordes genom att mäta periodtiden och dess förändring när olika relevanta variabler förändrades. Utifrån dessa mätvärden kunde en formel för relationen mellan periodtiden och variablerna uppskattas med hjälp av linjärisering, dimensionsanalys och en speciell teknik. Det slutgiltiga resultatet var att svängningstiden bland annat beror av materialet på tråden, stångens längd och massa, men intressant nog inte av flera variabler som antogs ha en inverkan, viktigast släppvinkeln och gravitationskonstanten $g$.
 
 % Sammanfattningen är fristående från rapporten i övrigt. Man skall kunna läsa sammanfattningen utan att ha läst rapporten, och tvärtom. I sammanfattningen skall det finnas en kort beskrivning av problem, metod och de viktigaste resultaten samt vad de medför. Den skall vara komplett, objektiv och lätt att förstå. Sammanfattningen skall sammanfatta arbetet och någon extra information, som inte finns i rapporten, får inte skrivas in i sammanfattningen. Sammanfattningen skall vara kort och bör maximalt innehålla \numrange{150}{200}{} ord. Det ska inte finnas bilder eller figurer i sammanfattningen. Den bör inte innehålla referenser eller formler, men den ska beskriva de viktigaste resultaten.
 
@@ -171,7 +171,7 @@ Denna rapport är en studie av svängningsrörelse som uppstår i en stång upph
     $m_s$ & Massa av stång (\si{kg}) \\
     $l_t$ & Längd av tråd (\si{m}) \\
     $r_t$ & Radius av tråd (\si{m}) \\
-    $\alpha$ & Släppvinkel (\si{^\circ}) \\
+    $v$ & Släppvinkel (\si{^\circ}) \\
     $G$ & Skjuvmodulen (\si{N/m^2}) \\
     $g$ & Tyngdacceleration (\si{m/s^2}) \\
     $C$ & Dimensionslös konstant 
@@ -188,7 +188,7 @@ Denna rapport är en studie av svängningsrörelse som uppstår i en stång upph
 
 Torsionssvängningar uppstår i mekaniska system där en kropp är upphängd i en tråd eller axel som vrids elastiskt under belastning. När den vridande kraft som återför stången till dess ursprungliga läge kommer från trådens elastiska egenskaper kan rörelsen behandlas som en torsionspendel. Sådana system används ofta i klassiska fysikexperiment och av ingenjörer för att bestämma materialegenskaper eller för att verifiera förenklade rörelsemodeller. För små vridningsvinklar kan rörelsen betraktas som harmonisk svängning, och svängningsperioden beror på både systemets geometri och trådens elasticitetsmodul $G$.
 
-I detta experiment är en rigid stång upphängd horisontellt i en tunn pianotråd och sätts i små vinkelrörelser i sitt horisontalplan. Syftet med arbetet är att undersöka hur svängningsperioden beror på systemets parametrar och att utvärdera hur väl mätningarna överensstämmer med den teoretiska modellen. Genom att variera de relevanta geometriska storheterna och jämföra de uppmätta perioderna med den förutsagda relationen kan modellens noggrannhet och begränsningar bedömas. Studien fokuserar på små svängningar, homogena stänger och pianotrådar med fast diameter, och luftmotstånd, materialbrister samt dämpningseffekter försummas.
+I detta experiment är en rigid stång upphängd horisontellt i en tunn pianotråd och sätts i små vinkelrörelser i sitt horisontalplan. Syftet med arbetet är att undersöka hur svängningsperioden beror på systemets parametrar och att utvärdera hur väl mätningarna överensstämmer med den teoretiska modellen. Genom att variera de relevanta geometriska storheterna och jämföra de uppmätta perioderna med den förutsagda relationen kan modellens noggrannhet och begränsningar bedömas. Studien fokuserar på små svängningar, homogena stänger och pianotrådar med fast diameter, luftmotstånd, materialbrister samt dämpningseffekter försummas.
 
 % Indelningen/Introduktionen kan med fördel indelas i
 % underrubriker; 
@@ -229,7 +229,7 @@ Metoden utgår från antagandet att de allra flesta fysikaliska samband som uppk
 %
 \begin{equation}
     \label{eq:power}
-    y = C ~ x_1^\alpha ~ x_2^\beta ~ x_3^\gamma \ldots
+    y = C ~ x_1^\alpha ~ x_2^\beta ~ x_3^\gamma \ldots,
 \end{equation}
 %
 för de ingående variablerna $x_1, x_2, x_3$ etc., som är potensfunktioner upphöjda till konstanter $\alpha, \beta, \gamma$ etc. och konstanten $C$. Det är viktigt att kontrollera att variablernas relation till $y$ faktiskt är potensfunktioner, något som inte är garanterat, men om linjäriseringen (se \ref{s:linear}) av variablerna relativt till $y$ ger ett rimligt resultat, som var fallet under denna laboration, är detta antagande med största sannolikhet sant. Denna linjärisering kan sedan användas för att bestämma exponenterna av varje variabel för vilken mätdata finns tillgänglig. I detta experiment uppkom flera variabler som inte kunde mätas med säkerhet med tillgängliga resurser - för bestämmning av deras exponenter har dimensionsanalys (se \ref{s:dimension}) och den ``speciella tekniken'' (se \ref{s:special}) använts.
@@ -240,36 +240,36 @@ Efter att alla variablers exponenter har fastställts kan konstanten $C$ bestäm
 
 När plotting av slutvärdet i en formel på formen i (\ref{eq:power}) mot en enskild variabel sker (det vill säga variabeln i fråga är den enda som varierar i de nuvarande mätningarna), är det lämpligt att betrakta resten av ekvationen som en konstant, vilket resulterar i en ekvation på formen
 %
-\begin{equation*}
-    y = C \cdot x^k
-\end{equation*}
+\begin{equation}
+    y = C \cdot x^k,
+\end{equation}
 %
 där $C$ är en ointressant konstant, och $k$ är den exponent på variabeln som just nu eftersöks.
 
-Det exakta värdet på $k$ kan nu bestämmas genom att logaritmera båda leden i ekvationen ovan, vilket ger oss
+Det exakta värdet på $k$ kan nu bestämmas genom att logaritmera båda leden i ekvationen ovan:
 %
-\begin{align*}
-    \ln y &= \ln (C \cdot x^k) \\
+\begin{align}
+    \ln y &= \ln (C \cdot x^k), \\
     \ln y &= k ~ \ln x + \ln C ,
-\end{align*}
+\end{align}
 %
 vilket är en ekvation på formen $y = kx + m$, eller en rät linje. Genom att plotta $\ln y$ mot $\ln x$ i en graf kommer en rät linje bildas, vars lutning kommer vara lika med det undersökta variabelns exponent i ekvationen (\ref{eq:power}). Konstanten $m$ är ointressant och kommer reflekteras i värdet på $C$ i den slutgiltiga formeln.
 
 \subsection{Dimensionsanalys}\label{s:dimension}
 
-För bestämning av okända variabler i en formel på formen (\ref{eq:power}) kan en teknik som utnyttjar att de dimensioner som är närvarande i båda led av formeln måste vara identiska användas. Tekniken beskrivs i detalj i Bucht \textit{et al}.\cite{Compendium}, men för denna rapport krävs ingen förståelse utöver att eftersom det resultat som eftersöks (svängningstiden för en stång hängande i tråd) har dimensionen $T$ måste också dimensionerna på formelns variabel uppgå till $T$. Användning av dimensionsanalys i detta experiment kommer att synas i sektioner \ref{s:metod} och \ref{s:resultat}.
+För att bestämma okända variabler i en formel av samma form som ekvation~\ref{eq:power} kan en dimensionsanalys utnyttjas. Tekniken beskrivs i detalj i kompendiet \textit{Experimentell Metodik} av Bucht \textit{et al}.\cite{Compendium}, men kan för denna rapport kortfattas till att dimensionerna som förekommer i högerled av en ekvation måste även förekomma i vänsterled till samma grad. I detta experiment söker vi periodtiden vilket har dimensionen $T$, enligt dimensionsanalys måste också dimensionerna på ekvationens högerled uppgå till $T$. Användning av dimensionsanalys i detta experiment kommer att synas i sektioner \ref{s:metod} och \ref{s:resultat}.
 
 \subsection{En speciell teknik}\label{s:special}
 
 I denna rapport har en teknik beskriven i \cite{Compendium} som ``speciell'' använts. Denna teknik kan användas för att approximera en variabelexponent då mätvärden saknas, till exempel på grund av otillräckligt testmaterial. Det är då möjligt att variera \textit{två} variabler, av vilka en redan har en känd exponent och den andra är variabeln vars exponent eftersöks. Det ger ett samband på formen
-\begin{equation*}
-    y = C_1 \cdot x^k \cdot z^{C_2}
-\end{equation*}
+\begin{equation}
+    y = C_1 \cdot x^k \cdot z^{C_2},
+\end{equation}
 %
 där $C_1$ och $C_2$ är konstanter och $k$ är den exponent som eftersöks. Eftersom $C_2$ redan är känt går det att ställa upp sambandet
-\begin{equation*}
+\begin{equation}
     \frac {y}{z^{C_2}} = C_1 \cdot x^k ,
-\end{equation*}
+\end{equation}
 %
 som sedan kan plottas och linjäriseras enligt metoden som beskrivs i sektion \ref{s:linear}.
 
@@ -282,24 +282,24 @@ som sedan kan plottas och linjäriseras enligt metoden som beskrivs i sektion \r
 I detta avsnitt presenteras den metodik som använts under laborationen.
 
 \subsection{Metodbeskrivning}
-I denna laboration bestämdes ett uttryck för periodtiden för torsionssvänging av en stång genom att mäta tiden för ett helt 
-rotationvarv av flera olika stänger med olika längd, vikt och diameter. Tiden för ett rotationsvarv för respektive stav analyserades, därefter plottades grafer i Microsoft Excel utifrån mätvärden som gör att vi kan exkludera faktorer som inte påverkar rotationstiden. 
+I denna laboration bestämdes ett uttryck för periodtiden för torsionssvängning av en stång genom att mäta tiden för hela 
+rotationsvarv av flera olika stänger med olika längd, vikt och diameter. Tiden för ett rotationsvarv för respektive stav analyserades, därefter plottades grafer i Microsoft Excel utifrån mätvärden som gör att vi kan exkludera faktorer som inte påverkar svängningstiden. 
 
 
 \subsection{Experimentell uppställning}
-Experimentet uppställdes som nedan, med en stång upphängd fritt i jämvikt från en pianotråd fäst i ett stativ, se figur \ref{fig:placeholder}: Längden på snöret från stativet till stången samt diametern på snöret mäts med linjal respektive mikrometer. Stångens massa mäts med våg, längden och diametern mäts med linjal respektive skjutmått.
+Experimentet uppställdes som nedan, med en stång upphängd fritt i jämvikt från en pianotråd fäst i ett stativ, se figur \ref{fig:uppställning}: Längden på snöret från stativet till stången samt diametern på snöret mäts med linjal respektive mikrometer. Stångens massa mäts med våg, längden och diametern mäts med linjal respektive skjutmått.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.3\linewidth]{EM-Uppsällning.jpg}
     \caption{Uppställning för mätning av torsionssvängning.}
-    \label{fig:placeholder}
+    \label{fig:uppställning}
     
 \end{figure}
 
 \subsection{Experimentell procedur}
 För varje stång med känd diameter, längd och vikt bestämdes tiden för en svängning. Detta gjordes genom att först låta stången ligga i 
-vila och därefter, för hand, vrida stången en bestämd vinkel, därefter med stoppur ta tiden för stången att återvända till sin ursprungsposition. Rotationstiden för varje stång
-fördes in i en tabell. Mätingarna för varje stav utfördes tre gånger vartefter medelvärdet användes för säkrare resultat. Rotationstiderna 
+vila och därefter, för hand, vrida stången en bestämd vinkel, därefter med stoppur ta tiden för stången att återvända till sin ursprungsposition. Svängningstiden för varje stång
+fördes in i en tabell. Mätningarna för varje stav utfördes tre gånger vartefter medelvärdet användes för säkrare resultat. Svängningstiderna 
 fördes därefter in i en tabell.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -316,7 +316,7 @@ Stångens massa $m_s$ varierades samtidigt som övriga variabler behölls konsta
 \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
-        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $v$ ($^\circ$) \\ \hline
         $0.40$ & $0.0075$ & Varieras & $0.70$ & $0.0006$ & $90$ \\ \hline
      \end{tabular} 
 \end{table}
@@ -335,7 +335,7 @@ I figur~\ref{fig:stångMassa_Tid} sågs ett samband mellan stångens massa och t
 
 \begin{align}
     \label{eq:stångMassa_Tid}
-    t=C \cdot m_s^\gamma
+    t=C \cdot m_s^\gamma.
 \end{align}
 
 Linjäriseringen av ekvation~\ref{eq:stångMassa_Tid} gav exponenten $\gamma = 0.5143$ (se figur~\ref{fig:stångMassa_Tid_Linjär}) vilket avrundades till $\gamma = \frac{1}{2}$.
@@ -347,7 +347,7 @@ Linjäriseringen av ekvation~\ref{eq:stångMassa_Tid} gav exponenten $\gamma = 0
   \centering
   \includegraphics[width=0.8\linewidth]{Images/Stångens_Massa_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Periodtid, $t$ (s), som funktion av stångens massa, $m_s$ (kg), enligt värden från tabell~\ref{t:stångMassa_Tid}}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av stångens massa, $m_s$ (kg), enligt värden från tabell~\ref{t:stångMassa_Tid}.}
   \label{fig:stångMassa_Tid}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -368,7 +368,7 @@ Trådens längd $l_t$ varierades samtidigt som övriga variabler behölls konsta
 \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
-        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $v$ ($^\circ$) \\ \hline
         $0.40$ & $0.0075$ & $0.218$ & Varieras & $0.0006$ & $90$ \\ \hline
      \end{tabular} 
 \end{table}
@@ -387,7 +387,7 @@ I figur~\ref{fig:trådLängd_Tid} sågs ett samband mellan trådens längd och t
 
 \begin{align}
     \label{eq:trådLängd_Tid}
-    t=C \cdot l_t^\delta
+    t=C \cdot l_t^\delta.
 \end{align}
 
 Linjäriseringen av ekvation~\ref{eq:trådLängd_Tid} gav exponenten $\delta = 0.4551$ (se figur~\ref{fig:trådLängd_Tid_Linjär}) vilket avrundades till $\delta = \frac{1}{2}$.
@@ -399,7 +399,7 @@ Linjäriseringen av ekvation~\ref{eq:trådLängd_Tid} gav exponenten $\delta = 0
   \centering
   \includegraphics[width=0.8\linewidth]{Images/Trådens_Längd_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Periodtid, $t$ (s), som funktion av trådens längd, $l_t$ (m), enligt värden från tabell~\ref{t:trådLängd_Tid}}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av trådens längd, $l_t$ (m), enligt värden från tabell~\ref{t:trådLängd_Tid}.}
   \label{fig:trådLängd_Tid}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -420,7 +420,7 @@ Trådens radie $r_t$ varierades samtidigt som övriga variabler behölls konstan
 \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
-        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $v$ ($^\circ$) \\ \hline
         $0.40$ & $0.0075$ & $0.698$ & $0.70$ & Varieras & $90$ \\ \hline
      \end{tabular} 
 \end{table}
@@ -439,10 +439,10 @@ I figur~\ref{fig:trådRadie_Tid} sågs ett samband mellan trådens radie och tid
 
 \begin{align}
     \label{eq:trådRadie_Tid}
-    t=C \cdot r_t^\epsilon
+    t=C \cdot r_t^\epsilon.
 \end{align}
 
-Linjäriseringen av ekvation~\ref{eq:trådRadie_Tid} gav exponenten $\epsilon = -1.9784$ (se figur~\ref{fig:trådRadie_Tid}) vilket avrundades till $\epsilon = -2$.
+Linjäriseringen av ekvation~\ref{eq:trådRadie_Tid} gav exponenten $\epsilon = -1.9784$ (se figur~\ref{fig:trådRadie_Tid_Linjär}) vilket avrundades till $\epsilon = -2$.
 
 \begin{figure}[H]
 \centering
@@ -451,7 +451,7 @@ Linjäriseringen av ekvation~\ref{eq:trådRadie_Tid} gav exponenten $\epsilon = 
   \centering
   \includegraphics[width=0.8\linewidth]{Images/Trådens_Radie_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Periodtid, $t$ (s), som funktion av trådens radie, $r_t$ (m), enligt värden från tabell~\ref{t:trådRadie_Tid}}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av trådens radie, $r_t$ (m), enligt värden från tabell~\ref{t:trådRadie_Tid}.}
   \label{fig:trådRadie_Tid}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
@@ -466,22 +466,22 @@ Linjäriseringen av ekvation~\ref{eq:trådRadie_Tid} gav exponenten $\epsilon = 
 
 \subsection{Släppvinkel}
 \label{sub:theta}
-Släppvinkeln $\alpha$ varierades samtidigt som övriga variabler behölls konstanta:
+Släppvinkeln $v$ varierades samtidigt som övriga variabler behölls konstanta:
 
 \begin{table}[H]
 \centering
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
-        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $\alpha$ ($^\circ$) \\ \hline
+        $l_s$ (m) & $r_s$ (m) & $m_s$ (kg) & $l_t$ (m) & $r_t$ (m) & $v$ ($^\circ$) \\ \hline
         $0.40$ & $0.0075$ & $0.218$ & $0.70$ & $0.0005$ & Varieras \\ \hline
      \end{tabular} 
 \end{table}
 
 \begin{table}[H]
-\caption{Mätvärden för periodtiden $t$ vid olika släppvinklar $\alpha$}\label{t:släppvinkel_Tid}
+\caption{Mätvärden för periodtiden $t$ vid olika släppvinklar $v$}\label{t:släppvinkel_Tid}
 \centering
     \begin{tabular}{c|cccccc}
-        $\alpha$ ($^\circ$) & 45 & 90 & 180 & 360\\
+        $v$ ($^\circ$) & 45 & 90 & 180 & 360\\
         \hline
         $t$ (s)   & 13.08 & 13.49 & 13.61 & 12.87
      \end{tabular} 
@@ -491,10 +491,10 @@ I figur~\ref{fig:släppvinkel_Tid} sågs inget tydligt samband mellan släppvink
 
 \begin{align}
     \label{eq:släppvinkel_Tid}
-    t=C \cdot \alpha^\theta
+    t=C \cdot v^\theta.
 \end{align}
 
-Linjäriseringen av ekvation~\ref{eq:släppvinkel_Tid} gav exponenten $\theta = -0.0057$ (se figur~\ref{fig:släppvinkel_Tid}) vilket avrundades till $\theta = 0$.
+Linjäriseringen av ekvation~\ref{eq:släppvinkel_Tid} gav exponenten $\theta = -0.0057$ (se figur~\ref{fig:släppvinkel_Tid_Linjär}) vilket avrundades till $\theta = 0$.
 
 \begin{figure}[H]
 \centering
@@ -503,14 +503,14 @@ Linjäriseringen av ekvation~\ref{eq:släppvinkel_Tid} gav exponenten $\theta = 
   \centering
   \includegraphics[width=0.8\linewidth]{Images/Släppvinkel_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Periodtid, $t$ (s), som funktion av släppvinkeln, $\alpha$ ($^\circ$), enligt värden från tabell~\ref{t:släppvinkel_Tid}}
+  \captionof{figure}{Periodtid, $t$ (s), som funktion av släppvinkeln, $v$ ($^\circ$), enligt värden från tabell~\ref{t:släppvinkel_Tid}.}
   \label{fig:släppvinkel_Tid}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{Images/Släppvinkel_Linjäriserad_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Logaritmerad periodtid, ln($t$), som funktion av släppvinkeln logaritmerad, ln($\alpha$).}
+  \captionof{figure}{Logaritmerad periodtid, ln($t$), som funktion av släppvinkeln logaritmerad, ln($v$).}
   \label{fig:släppvinkel_Tid_Linjär}
 \end{minipage}
 
@@ -544,7 +544,7 @@ I figur~\ref{fig:stångLängd_Tid} sågs ett samband mellan stångens längd och
 
 \begin{align}
     \label{eq:stångLängd_Tid}
-    \frac{t}{m_s^2}=C \cdot l_s^\alpha
+    \frac{t}{\sqrt{m_s}}=C \cdot l_s^\alpha.
 \end{align}
 
 Linjäriseringen av ekvation~\ref{eq:stångLängd_Tid} gav exponenten $\alpha = 0.9933$ (se figur~\ref{fig:stångLängd_Tid_Linjär}) vilket avrundades till $\alpha = 1$.
@@ -556,14 +556,14 @@ Linjäriseringen av ekvation~\ref{eq:stångLängd_Tid} gav exponenten $\alpha = 
   \centering
   \includegraphics[width=0.8\linewidth]{Images/Stångens_Längd_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Periodtid/stångmassa$^2$, $\frac{t}{m_s^2}$ (s), som funktion av stångens längd, $l_s$ (m), enligt värden från tabell~\ref{t:stångLängd_Tid}}
+  \captionof{figure}{Periodtid/stångmassa$^2$, $\frac{t}{\sqrt{m_s}}$ (s), som funktion av stångens längd, $l_s$ (m), enligt värden från tabell~\ref{t:stångLängd_Tid}.}
   \label{fig:stångLängd_Tid}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{Images/Stångens_Längd_Linjäriserad_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Logaritmerad periodtid/stångmassa$^2$, ln($\frac{t}{m_s^2}$), som funktion av stångens längd logaritmerad, ln($l_s$).}
+  \captionof{figure}{Logaritmerad periodtid/stångmassa$^2$, ln($\frac{t}{\sqrt{m_s}}$), som funktion av stångens längd logaritmerad, ln($l_s$).}
   \label{fig:stångLängd_Tid_Linjär}
 \end{minipage}
 
@@ -597,7 +597,7 @@ I figur~\ref{fig:stångRadie_Tid} sågs inget tydligt samband mellan stångens r
 
 \begin{align}
     \label{eq:stångRadie_Tid}
-    \frac{t}{m_s^2}=C \cdot r_s^\beta
+    \frac{t}{\sqrt{m_s}}=C \cdot r_s^\beta.
 \end{align}
 
 Linjäriseringen av ekvation~\ref{eq:stångRadie_Tid} gav exponenten $\beta = -0.0048$ (se figur~\ref{fig:stångRadie_Tid_Linjär}) vilket avrundades till $\beta = 0$.
@@ -609,14 +609,14 @@ Linjäriseringen av ekvation~\ref{eq:stångRadie_Tid} gav exponenten $\beta = -0
   \centering
   \includegraphics[width=0.8\linewidth]{Images/Stångens_Radie_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Periodtid/stångmassa$^2$, $\frac{t}{m_s^2}$ (s), som funktion av stångens radie, $r_s$ (m), enligt värden från tabell~\ref{t:stångRadie_Tid}}
+  \captionof{figure}{Periodtid/stångmassa$^2$, $\frac{t}{\sqrt{m_s}}$ (s), som funktion av stångens radie, $r_s$ (m), enligt värden från tabell~\ref{t:stångRadie_Tid}.}
   \label{fig:stångRadie_Tid}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{Images/Stångens_Radie_Linjäriserad_Graf.png}
   \captionsetup{width=.8\linewidth}
-  \captionof{figure}{Logaritmerad periodtid/stångmassa$^2$, ln($\frac{t}{m_s^2}$), som funktion av stångens radie logaritmerad, ln($r_s$).}
+  \captionof{figure}{Logaritmerad periodtid/stångmassa$^2$, ln($\frac{t}{\sqrt{m_s}}$), som funktion av stångens radie logaritmerad, ln($r_s$).}
   \label{fig:stångRadie_Tid_Linjär}
 \end{minipage}
 
@@ -626,34 +626,34 @@ Linjäriseringen av ekvation~\ref{eq:stångRadie_Tid} gav exponenten $\beta = -0
 Enligt våra resultat gör vi ansats för periodtiden:
 \begin{align}
     \label{eq:dimensionsanalysResultat}
-    t= C \cdot l_s^\alpha \cdot r_s^\beta \cdot m_s^\gamma \cdot l_t^\delta \cdot r_t^\epsilon \cdot \alpha^\theta \cdot G^\zeta \cdot g^\eta
+    t= C \cdot l_s^\alpha \cdot r_s^\beta \cdot m_s^\gamma \cdot l_t^\delta \cdot r_t^\epsilon \cdot v^\theta \cdot G^\zeta \cdot g^\eta,
 \end{align}
-Där $C$ är en dimensionslös konstant och experiment har givit:
+där $C$ är en dimensionslös konstant och experiment har givit:
 \begin{align*}
-    \alpha &= 1 \text{ (se avsnitt~\ref{sub:alpha}})\\
-    \beta &= 0 \text{ (se avsnitt~\ref{sub:beta}})\\
-    \gamma &= \frac{1}{2} \text{ (se avsnitt~\ref{sub:gamma}})\\
-    \delta &= \frac{1}{2} \text{ (se avsnitt~\ref{sub:delta}})\\
-    \epsilon &= -2 \text{ (se avsnitt~\ref{sub:epsilon}})\\
-    \theta &= 0 \text{ (se avsnitt~\ref{sub:theta}})
+    \alpha &= 1 \text{ (se avsnitt~\ref{sub:alpha}}),\\
+    \beta &= 0 \text{ (se avsnitt~\ref{sub:beta}}),\\
+    \gamma &= \frac{1}{2} \text{ (se avsnitt~\ref{sub:gamma}}),\\
+    \delta &= \frac{1}{2} \text{ (se avsnitt~\ref{sub:delta}}),\\
+    \epsilon &= -2 \text{ (se avsnitt~\ref{sub:epsilon}},)\\
+    \theta &= 0 \text{ (se avsnitt~\ref{sub:theta}}).
 \end{align*}
 Övriga exponenter ($\zeta$ och $\eta$) bestämms med dimensionsanalys av ekvation~\ref{eq:dimensionsanalysResultat}:
 \begin{align*}
     &[t]= [C] \cdot [l_s] \cdot [m_s]^{1/2} \cdot [l_t]^{1/2} \cdot [r_t]^{-2} \cdot [G]^\zeta \cdot [g]^\eta
     &\xRightarrow{} \\
     &T = L \cdot M^{1/2} \cdot L^{1/2} \cdot L^{-2} \cdot (ML^{-1}T^{-2})^\zeta \cdot (LT^{-2})^\eta &\xRightarrow{}\\
-    &T = L^{1+1/2-2-\zeta+\eta} \cdot M^{1/2+\zeta} \cdot T^{-2\zeta-2\eta}    
+    &T = L^{1+1/2-2-\zeta+\eta} \cdot M^{1/2+\zeta} \cdot T^{-2\zeta-2\eta}.
 \end{align*}
 Dimensionerna måste vara lika i högerled och vänsterled:
 \begin{align*}
-    M : 0 = &\frac{1}{2}+\zeta &\xRightarrow{}&&\zeta=-\frac{1}{2}\\
-    T : 1 = &-2\zeta-2\eta &\xRightarrow{}&&\eta = -\frac{1}{2}-\zeta = 0\\
-    L : 0 = &1+\frac{1}{2}-2-\zeta+\eta &\xRightarrow{}&&\eta-\zeta =\frac{1}{2}
+    M : 0 = &\frac{1}{2}+\zeta &\xRightarrow{}&&\zeta=-\frac{1}{2},\\
+    T : 1 = &-2\zeta-2\eta &\xRightarrow{}&&\eta = -\frac{1}{2}-\zeta = 0,\\
+    L : 0 = &1+\frac{1}{2}-2-\zeta+\eta &\xRightarrow{}&&\eta-\zeta =\frac{1}{2},
 \end{align*}
-Detta ger oss periodtiden:
+detta ger oss periodtiden:
 \begin{align}
     \label{eq:formelUtanKonstant}
-    t = C \cdot \frac{l_s\sqrt{m_sl_t}}{r_t^2\sqrt{G}}
+    t = C \cdot \frac{l_s\sqrt{m_sl_t}}{r_t^2\sqrt{G}}.
 \end{align}
 
 \subsection{Beräkning av konstanten}
@@ -661,7 +661,7 @@ Slutkonstanten beräknades genom att skapa en graf där $Y=t$ och $X=\frac{l_s\s
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\linewidth]{Images/Konstant_Graf.png}
-    \caption{Periodtid, $t$ (s), som funktion av $\frac{l_s\sqrt{m_sl_t}}{r_t^2\sqrt{G}}$ (s)}
+    \caption{Periodtid, $t$ (s), som funktion av $\frac{l_s\sqrt{m_sl_t}}{r_t^2\sqrt{G}}$ (s)}.
     \label{fig:placeholder}
 \end{figure}
 
@@ -673,17 +673,17 @@ Slutkonstanten beräknades genom att skapa en graf där $Y=t$ och $X=\frac{l_s\s
 
 Som har klargjorts i sektion \ref{s:resultat} är formeln för periodtid $t$ för torsionssvängning av en stång upphängd i en tråd lika med:
 
-\begin{align*}
+\begin{align}
     t =\frac{\pi~l_s\sqrt{m_sl_t}} {2~r_t^2\sqrt{G}} .
-\end{align*}
+\end{align}
 
-Konstanten har avrundats till $\frac{\pi}{2}$ istället för $1.6$ eftersom det finns en sannolikhet att $\pi$ är en del av ekvationen då cyllindrar är involverade och eftersom $\frac{pi}{2}$ är närmare det uppmätta värdet för $C$ än vad $1.6$ är.
+Konstanten har avrundats till $\frac{\pi}{2}$ istället för $1.6$ eftersom det finns en sannolikhet att $\pi$ är en del av ekvationen då cylindrar är involverade och eftersom $\frac{\pi}{2}$ är närmare det uppmätta värdet för $C$ än vad $1.6$ är.
 
 Målet med detta experiment var att undersöka hur olika fysiska egenskaper påverkar svängningsperioden av en stång upphängd i en tråd, samt att kontrollera om de empiriska resultaten stämmer överens med teorin. Under experimentets gång fanns att släppvinkeln inte påverkar periodtiden så länge den är liten, vilket är vad den framtagna formeln förutsäger. Periodtiden ökade när en längre tråd eller stång användes, och ökade lite när mer massa lades på stången. En tjockare tråd gjorde periodtiden kortare, eftersom den då blev styvare och utövade mer kraft på stången.
 
 De lineariserade graferna visade tydliga räta linjer, vilket betyder att relationerna mellan de testade variablerna och periodtiden kan beskrivas med potenser som förväntat i ansatsen. De uppmätta resultaten stämmer bra överens med de teoretiskt förväntade värdena väl - några små variationer kommer naturligtvis att introduceras av den manuella tidtagningsmetoden med stoppur. Trots detta är det tydligt att experimentet bekräftade det förväntade beteendet vid en sådan här torsionssvängning.
 
-Genom att förändra en variabel i taget och plotta resultaten från varje grupp av mätdata kunde vi tydligt se hur varje fysikalisk egenskap påverkade svängningstiden. Experimentet gav därmed en god förståelse av torsionssvängning och visade att den valda metoden och teorin är användbar för att studera dessa sammanhang under enkla laboratioreförhållanden.
+Genom att förändra en variabel i taget och plotta resultaten från varje grupp av mätdata kunde vi tydligt se hur varje fysikalisk egenskap påverkade svängningstiden. Experimentet gav därmed en god förståelse av torsionssvängning och visade att den valda metoden och teorin är användbar för att studera dessa sammanhang under enkla laboratorieförhållanden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -                  Referenser/Bibliography               - %

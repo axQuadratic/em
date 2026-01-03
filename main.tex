@@ -167,10 +167,10 @@ Denna rapport är en studie av svängningsrörelse som uppstår i en stång upph
 \begin{table}[h] 
     \begin{tabular}{l l} % Två vänsterjusterade
     $l_s$ & Längd av stång (\si{m}) \\
-    $r_s$ & Radius av stång (\si{m}) \\
+    $r_s$ & Radie av stång (\si{m}) \\
     $m_s$ & Massa av stång (\si{kg}) \\
     $l_t$ & Längd av tråd (\si{m}) \\
-    $r_t$ & Radius av tråd (\si{m}) \\
+    $r_t$ & Radie av tråd (\si{m}) \\
     $v$ & Släppvinkel (\si{^\circ}) \\
     $G$ & Skjuvmodulen (\si{N/m^2}) \\
     $g$ & Tyngdacceleration (\si{m/s^2}) \\
@@ -283,18 +283,47 @@ I detta avsnitt presenteras den metodik som använts under laborationen.
 
 \subsection{Metodbeskrivning}
 I denna laboration bestämdes ett uttryck för periodtiden för torsionssvängning av en stång genom att mäta tiden för hela 
-rotationsvarv av flera olika stänger med olika längd, vikt och diameter. Tiden för ett rotationsvarv för respektive stav analyserades, därefter plottades grafer i Microsoft Excel utifrån mätvärden som gör att vi kan exkludera faktorer som inte påverkar svängningstiden. 
+rotationsvarv av flera olika stänger med olika längd, vikt och diameter. Tiden för ett rotationsvarv för respektive stav analyserades, därefter plottades grafer i Microsoft Excel utifrån mätvärden som gör att vi kan exkludera faktorer som inte påverkar svängningstiden.
 
+Tabell~\ref{t:variabler} nedan visar de variabler som bedömdes skulle kunna ha en inverkan på svängningstiden, tillsammans med deras dimensioner. Så många av dessa variabler som var möjligt med experimentets resurser testades, resultatet av vilket behandlas i sektion ~\ref{s:resultat}.
 
-\subsection{Experimentell uppställning}
-Experimentet uppställdes som nedan, med en stång upphängd fritt i jämvikt från en pianotråd fäst i ett stativ, se figur \ref{fig:uppställning}: Längden på snöret från stativet till stången samt diametern på snöret mäts med linjal respektive mikrometer. Stångens massa mäts med våg, längden och diametern mäts med linjal respektive skjutmått.
-\begin{figure}[htbp]
+\begin{table}[H]
+\caption{Experimentets behandlade variabler och dimensioner.}\label{t:variabler}
+\centering
+     \begin{tabular}{|l|l|}
+       \hline
+       Variabel                 & Dimension     \\ \hline
+       Längd av stång ($l_s$)   & $L$           \\
+       Radie av stång ($r_s$)   & $L$           \\
+       Massa av stång ($m_s$)   & $M$           \\
+       Längd av tråd ($l_t$)    & $L$           \\
+       Radie av tråd ($r_t$)    & $L$           \\
+       Släppvinkel ($v$)        & Dimensionslös \\
+       Skjuvmodul av tråd ($G$) & $ML^{-1}T^{-2}$   \\
+       Tyngdacceleration ($g$)  & $MT^{-2}$       \\
+       \hline
+     \end{tabular} 
+\end{table}
+%
+Utifrån denna variabellista gjordes en ansats att svängningstiden $t$ kommer att bero av dessa variabler enligt en exponentialfunktion, ett förhållande som ofta uppstår naturligt. Det vill säga
+\begin{align}
+    \label{eq:dimensionsanalysResultat}
+    t= C \cdot l_s^\alpha \cdot r_s^\beta \cdot m_s^\gamma \cdot l_t^\delta \cdot r_t^\epsilon \cdot v^\theta \cdot G^\zeta \cdot g^\eta,
+\end{align}
+där $C$ är en okänd dimensionslös konstant och $\alpha$ till $\eta$ är exponenter som vi kan bestämma genom teknikerna som beskrivs i sektion~\ref{s:teori}.
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.3\linewidth]{EM-Uppsällning.jpg}
     \caption{Uppställning för mätning av torsionssvängning.}
     \label{fig:uppställning}
     
 \end{figure}
+\newpage
+
+\subsection{Experimentell uppställning}
+Experimentet ställdes upp med en stång upphängd fritt i jämvikt från en pianotråd fäst i ett stativ, se Figur \ref{fig:uppställning}: Längden på snöret från stativet till stången samt diametern på snöret mäts med linjal respektive mikrometer. Stångens massa mäts med våg, längden och diametern mäts med linjal respektive skjutmått.
+
 
 \subsection{Experimentell procedur}
 För varje stång med känd diameter, längd och vikt bestämdes tiden för en svängning. Detta gjordes genom att först låta stången ligga i 
@@ -302,11 +331,14 @@ vila och därefter, för hand, vrida stången en bestämd vinkel, därefter med 
 fördes in i en tabell. Mätningarna för varje stav utfördes tre gånger vartefter medelvärdet användes för säkrare resultat. Svängningstiderna 
 fördes därefter in i en tabell.
 
+\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % -                    Resultat/Results                    - %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 \section{Resultat}\label{s:resultat}
+
+I denna sektion beskrivs de experimentellt påvisade sambanden mellan svängningstiden och de variabler som identifierats som möjligen signifikanta i Tabell~\ref{t:variabler}.
 
 \subsection{Stångens massa}
 \label{sub:gamma}
@@ -623,12 +655,11 @@ Linjäriseringen av ekvation~\ref{eq:stångRadie_Tid} gav exponenten $\beta = -0
 \end{figure}
 
 \subsection{Dimensionsanalys}
-Enligt våra resultat gör vi ansats för periodtiden:
-\begin{align}
-    \label{eq:dimensionsanalysResultat}
-    t= C \cdot l_s^\alpha \cdot r_s^\beta \cdot m_s^\gamma \cdot l_t^\delta \cdot r_t^\epsilon \cdot v^\theta \cdot G^\zeta \cdot g^\eta,
-\end{align}
-där $C$ är en dimensionslös konstant och experiment har givit:
+Med hjälp av våra resultat kan vi nu återvända till vår ansats från sektion~\ref{s:metod}, ekv.(\ref{eq:dimensionsanalysResultat}):
+\begin{align*}
+    t= C \cdot l_s^\alpha \cdot r_s^\beta \cdot m_s^\gamma \cdot l_t^\delta \cdot r_t^\epsilon \cdot v^\theta \cdot G^\zeta \cdot g^\eta.
+\end{align*}
+Experimentet har givit:
 \begin{align*}
     \alpha &= 1 \text{ (se avsnitt~\ref{sub:alpha}}),\\
     \beta &= 0 \text{ (se avsnitt~\ref{sub:beta}}),\\
@@ -637,7 +668,7 @@ där $C$ är en dimensionslös konstant och experiment har givit:
     \epsilon &= -2 \text{ (se avsnitt~\ref{sub:epsilon}},)\\
     \theta &= 0 \text{ (se avsnitt~\ref{sub:theta}}).
 \end{align*}
-Övriga exponenter ($\zeta$ och $\eta$) bestämms med dimensionsanalys av ekvation~\ref{eq:dimensionsanalysResultat}:
+De kvarvarande exponenterna ($\zeta$ och $\eta$) bestäms med dimensionsanalys av ekvation~\ref{eq:dimensionsanalysResultat}:
 \begin{align*}
     &[t]= [C] \cdot [l_s] \cdot [m_s]^{1/2} \cdot [l_t]^{1/2} \cdot [r_t]^{-2} \cdot [G]^\zeta \cdot [g]^\eta
     &\xRightarrow{} \\

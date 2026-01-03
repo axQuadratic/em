@@ -6,15 +6,15 @@
 \contentsline {subsection}{\numberline {2.3}En speciell teknik}{2}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Metod}{3}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Metodbeskrivning}{3}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Experimentell uppställning}{3}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Experimentell procedur}{3}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Resultat}{4}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Stångens massa}{4}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Inverkan av trådens längd}{4}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Trådens radie}{5}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Släppvinkel}{5}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Stångens längd}{6}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Stångens radie}{7}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Dimensionsanalys}{7}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Beräkning av konstanten}{8}{subsection.4.8}%
-\contentsline {section}{\numberline {5}Diskussion och slutsatser}{9}{section.5}%
+\contentsline {subsection}{\numberline {3.2}Experimentell uppställning}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Experimentell procedur}{4}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Resultat}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Stångens massa}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Inverkan av trådens längd}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Trådens radie}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Släppvinkel}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Stångens längd}{7}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Stångens radie}{8}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Dimensionsanalys}{8}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Beräkning av konstanten}{9}{subsection.4.8}%
+\contentsline {section}{\numberline {5}Diskussion och slutsatser}{10}{section.5}%
